@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    background-color: #f4f6f8;
+}
+h1 {
+    font-family: "DM Serif Display";
+    font-size: 2.5em;
+    text-align: center;
+    color: #182887;
+    margin-bottom: 25px;
+}
+
+textarea {
+    font-family: Roboto;
+    font-size: 14px;
+}

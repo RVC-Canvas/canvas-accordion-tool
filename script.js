@@ -175,17 +175,16 @@ $(document).ready(function () {
             const content =
                 formatContent(rawContent);
 
-            const fontWeight =
-                $(this).find('.sectionBold').is(':checked')
-                    ? '900'
-                    : 'normal';
-
             const fontSize =
                 $(this).find('.sectionFontSize').val();
 
             const fullTitle =
                 emoji ? `${emoji} ${title}` : title;
 
+            const outputTitle =
+                $(this).find('.sectionBold').is(':checked')
+                    ? `<strong>${fullTitle}</strong>`
+                    : `${fullTitle}`;
             output += `
 
     <details>
@@ -197,12 +196,11 @@ $(document).ready(function () {
                 color:${textColor};
                 padding:12px;
                 font-size:${fontSize};
-                font-weight:${fontWeight};
                 cursor:pointer;
                 border-bottom:1px solid #ccc;
                 outline:none;
             ">
-            ${fullTitle}
+            ${outputTitle}
         </summary>
 
         <div
